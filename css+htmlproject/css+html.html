@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Cofee Shop</title>
+    <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    
+    .navbar {
+      background-color: #007bff;
+    }
+    
+    .navbar .navbar-brand {
+      color:#ffc107;
+      font-weight: bold;
+    }
+    
+    .navbar-nav .nav-link {
+      color:#ffc107;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    h4 {
+      color: #007bff;
+    }
+    
+    text-muted {
+      font-size: 1.2rem;
+    }
+    
+    .product-details {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    form-label {
+      font-weight: bold;
+      color: #007bff;
+    }
+    
+    form-select, .form-control {
+      border-radius: 0.25rem;
+    }
+    
+    button.btn-success {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    
+    button.btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      height: 400px;
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: #007bff;
+    }
+    
+    .card {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+    }
+    
+    .card-body {
+      background-color: #fff;
+    }
+    
+    .card-title {
+      font-weight: bold;
+    }
+    
+    .card-text {
+      font-style: italic;
+      color: #666;
+    }
+    
+    .text-warning {
+      font-size: 1.2rem;
+      color: #ffc107;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+    
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    .card-text {
+      color: #007bff;
+      font-size: 1.1rem;
+    }
+    
+    h4 {
+      color: #007bff;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+    
+    .container.mt-5 {
+      margin-top: 50px;
+    }
+    
+    footer {
+      background-color: #007bff;
+      color:#ffc107;
+    }
+    
+    footer p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">ShopLogo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Product Image Carousel -->
+        <div class="col-md-6">
+          <div
+            id="productCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRWm9qKkP2EkvSnBuwhWD7T8-oRTUNKZFq13dgEowlcT4Kqymc2bv4b0ZzJXv0aT4wR"
+                  class="d-block w-100"
+                  alt="Product Image 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZiP77wtVKwXq6nNk6JuGN5Ps9E7abLOCykH7PRxiTlkT9b_CB"
+                  class="d-block w-100"
+                  alt="Product Image 2"/>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.google.com/url?sa=i&url=http%3A%2F%2Ft0.gstatic.com%2Flicensed-image%3Fq%3Dtbn%3AANd9GcSdo0vgNnQa7jI3iOW40mcgzfs5ysTGtS4HKsLM1Xng4ux6W0sB3S-aJQmfFNkNpXlO&psig=AOvVaw1WQJ67nm25wLM97URG0xni&ust=1733403531992000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMjgosGVjooDFQAAAAAdAAAAABAR"
+                  class="d-block w-100"
+                  alt="Product Image 3"/>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <h2>Product Name</h2>
+          <p class="text-muted">$99.99</p>
+          <p>
+            Good news: we’re covering everything on the different types of coffee, from the difference of Arabica and Robusta coffee beans to all the ways to brew your favorite cup of joe. Hold on tight. We’re diving deep into your morning go-to drink.
+          </p>
+
+          <!-- Size/Color Selectors -->
+          <form>
+            <div class="mb-3">
+              <label for="flavourSelect" class="form-label">Flavour:</label>
+              <select class="form-select" id="colorSelect">
+                <option selected>Choose flavour</option>
+                <option value="1">French Vanilla</option>
+                <option value="2">Hazelnut</option>
+                <option value="3">Caramel</option>
+                <option value="4">Affogato</option>
+                <option value="5">Caffè macchiato</option>
+                <option value="6">Cappuccino</option>
+              </select>
+            </div>
+
+            <!-- Quantity Input -->
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="quantity"
+                value="1"
+                min="1"
+              />
+            </div>
+
+            <!-- Buy Button -->
+            <button type="button" class="btn btn-success">Buy Now</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Customer Reviews Section -->
+      <div class="row mt-5">
+        <h4>Customer Reviews</h4>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Krishna</h5>
+              <p class="card-text">Excellent coffee.</p>
+              <p class="text-warning">★★★★★</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pranay</h5>
+              <p class="card-text">Good coffee a bit expensive.</p>
+              <p class="text-warning">★★★★☆</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Srinivas</h5>
+                <p class="card-text">Great & super.</p>
+                <p class="text-warning">★★★★☆</p>
+              </div>
+            </div>
+        </div><div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Veera</h5>
+                <p class="card-text">Good coffee.</p>
+                <p class="text-warning">★★★★☆</p>
+              </div>
+            </div>
+          </div><div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Koushik</h5>
+                <p class="card-text">Marvellous</p>
+                <p class="text-warning">★★★★☆</p>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Mahesh</h5>
+              <p class="card-text">Ok, but reduse sugar.</p>
+              <p class="text-warning">★★★☆☆</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products Section -->
+      <div class="row mt-5">
+        <h4>Related Products</h4>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://images.herzindagi.info/image/2023/May/how-to-make-perfect-cafe-mocha-at-home.jpg"
+              class="card-img-top"
+              alt="Related Product 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Product 1</h5>
+              <p class="card-text">$139.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa91A7BFly53hOr7UPpJei8ZApjBft9UGLGSCERKFCJoiGum7ufULzn16jacPdAVWVmQ&usqp=CAU"
+              class="card-img-top"
+              alt="Related Product 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Product 2</h5>
+              <p class="card-text">$159.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://www.7000steps.com/cdn/shop/articles/k.png?v=1714708202"
+              class="card-img-top"
+              alt="Related Product 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Product 3</h5>
+              <p class="card-text">$79.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTID-V69B-UC-VgD8ox80a8y0SCtWWUmkIpwQz7a8uUUihBzBVQ"
+              class="card-img-top"
+              alt="Related Product 4"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Product 4</h5>
+              <p class="card-text">$149.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Contact & Address Section -->
+     <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Contact Us</h4>
+            <p>Phone: +91 8897564943</p>
+            <p>Email: coffeeshop@gmail.com</p>
+            <p>Customer Support: support@coffeeshop.com</p>
+          </div>
+          <div class="col-md-6">
+            <h4>Our Address</h4>
+            <p>123 Coffee Street, Banjara Hills, 500034</p>
+            <p>Open Hours: 10:00 AM - 10:30 PM (Mon-Fri)</p>
+            <p>Open Hours: 08:30 AM - 11:30 PM (Sat & Sun)</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center mt-5 p-4">
+        <p> Thank you sir/madam & visit again </p>
+      <p>&copy; 2024 ShopLogo. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
